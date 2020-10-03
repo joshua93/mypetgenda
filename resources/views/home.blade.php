@@ -13,6 +13,11 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                    <ul>
+                    @foreach($pets as $pet)
+                   <li>{{ $pet->petName }}</li>
+                    @endforeach
+                    </ul>
 
                     {{ __('You are logged in!') }}
                 </div>

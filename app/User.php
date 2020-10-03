@@ -36,4 +36,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+//Aqui van las relaciones de las tablas creadas, entre otras...
+    public function tasks(){
+        return $this->hasMany(Task::class);
+    }
+    public function pets(){
+        return $this->hasMany(Pet::class, 'userId');
+    }
+
 }
